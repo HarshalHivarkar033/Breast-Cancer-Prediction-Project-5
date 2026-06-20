@@ -1,0 +1,143 @@
+```html
+<!doctype html>
+<html lang="en">
+<head>
+  <link rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AI Breast Cancer Prediction System</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body{
+            background: linear-gradient(135deg,#667eea,#764ba2);
+            min-height:100vh;
+            font-family:Arial,sans-serif;
+        }
+
+        .container{
+            background:white;
+            border-radius:25px;
+            padding:40px;
+            margin-top:40px;
+            margin-bottom:40px;
+            box-shadow:0 15px 40px rgba(0,0,0,0.2);
+        }
+
+        h1{
+            color:#1e3a8a;
+            font-weight:bold;
+        }
+
+        textarea{
+            border-radius:15px !important;
+        }
+
+        .btn-primary{
+            border-radius:15px;
+            padding:12px 30px;
+            font-size:18px;
+        }
+
+        .btn-primary:hover{
+            transform:scale(1.05);
+            transition:0.3s;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="text-center mb-4">
+        <h1>🎗️ AI Breast Cancer Prediction System</h1>
+        <p class="lead text-muted">
+            Early Detection Through Machine Learning
+        </p>
+    </div>
+
+    <img
+        src="https://images.pexels.com/photos/7089401/pexels-photo-7089401.jpeg"
+        class="img-fluid rounded shadow mb-4"
+        alt="Healthcare AI"
+        style="height:250px;width:100%;object-fit:cover;">
+
+    <form action="/predict" method="POST">
+
+        <div class="mb-3">
+            <label class="form-label">
+                Input Breast Cancer Features
+            </label>
+
+            <textarea
+                class="form-control"
+                name="feature"
+                rows="4"
+                placeholder="Enter all 31 features separated by commas"
+                required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">
+            Predict
+        </button>
+
+    </form>
+
+    {% if message %}
+
+        {% for i in message %}
+
+            <div class="mt-4">
+
+                <h4>{{ i }}</h4>
+
+                {% if i == 'No Cancer Detected' %}
+
+                    <div class="card border-success shadow mt-3">
+                        <div class="card-body text-center">
+
+                            <h3 class="text-success">
+                                ✅ No Cancer Detected
+                            </h3>
+
+                            <p>
+                                The prediction indicates a low risk of breast cancer.
+                            </p>
+
+                        </div>
+                    </div>
+
+                {% else %}
+
+                    <div class="card border-danger shadow mt-3">
+                        <div class="card-body text-center">
+
+                            <h3 class="text-danger">
+                                ⚠️ Cancer Detected
+                            </h3>
+
+                            <p>
+                                Please consult a healthcare professional for further evaluation.
+                            </p>
+
+                        </div>
+                    </div>
+
+                {% endif %}
+
+            </div>
+
+        {% endfor %}
+
+    {% endif %}
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
+```
