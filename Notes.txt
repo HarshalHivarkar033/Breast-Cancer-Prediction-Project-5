@@ -1,0 +1,248 @@
+AI BREAST CANCER PREDICTION SYSTEM
+==================================================
+
+PROJECT OVERVIEW
+================
+
+The AI Breast Cancer Prediction System is a Machine Learning based web application that helps predict whether a breast tumor is cancerous or non-cancerous.
+
+The system takes medical information from the user, processes it using a trained Machine Learning model, and displays the prediction result along with a risk percentage.
+
+The main goal of this project is to demonstrate how Machine Learning can assist in the early detection of breast cancer.
+
+==================================================
+
+TECHNOLOGIES USED
+=================
+
+• Python
+
+• Flask
+
+• Machine Learning
+
+• Scikit-Learn
+
+• NumPy
+
+• Pandas
+
+• HTML
+
+• CSS
+
+• Bootstrap
+
+==================================================
+HOW TO RUN THE PROJECT
+======================
+Method 1: Automatic Browser Opening
+
+1. Open Command Prompt or PowerShell.
+
+2. Go to the project folder.
+Example:
+cd "C:\Users\ASUS\Desktop\Microsoft Intership\Breast cancer Prediction"
+
+3. Activate the virtual environment (if available).
+Example:
+.venv\Scripts\activate
+
+4. Install the required libraries.
+
+pip install flask numpy pandas scikit-learn
+
+5. Run the application.
+python app.py
+
+6. The browser will automatically open the project page.
+==================================================
+
+Method 2: Manual Browser Opening
+
+1. Run the application using:
+python app.py
+
+2. Wait until the terminal shows:
+Running on [http://127.0.0.1:5000](http://127.0.0.1:5000)
+
+3. Open any web browser.
+
+4. Enter the following URL:
+[http://127.0.0.1:5000](http://127.0.0.1:5000)
+
+==================================================
+HOW THE PROJECT WORKS
+=====================
+Step 1:
+The user opens the website.
+
+Step 2:
+The user enters the breast cancer feature values.
+
+Step 3:
+The entered data is sent to the Flask backend.
+
+Step 4:
+The backend converts the input data into a format suitable for Machine Learning.
+
+Step 5:
+The trained Machine Learning model analyzes the data.
+
+Step 6:
+The model predicts whether the tumor is:
+
+• Cancer Detected
+
+or
+
+• No Cancer Detected
+
+Step 7:
+The system calculates the prediction probability (risk percentage).
+
+Step 8:
+The result is displayed on the website with a prediction card and risk score.
+
+==================================================
+PROJECT WORKFLOW
+================
+
+
+
+User Input
+
+↓
+
+Flask Web Application
+
+↓
+
+Data Processing
+
+↓
+
+Machine Learning Model
+
+↓
+
+Prediction
+
+↓
+
+Risk Percentage
+
+↓
+
+Result Display
+
+
+
+==================================================
+ABOUT BREAST CANCER
+===================
+Breast cancer is a disease in which cells in the breast grow abnormally and uncontrollably.
+
+There are two main types of tumors:
+
+1. Benign Tumor
+
+
+
+   * Non-cancerous
+
+   * Does not spread to other parts of the body
+
+
+
+2. Malignant Tumor
+
+
+
+   * Cancerous
+
+   * Can spread to nearby tissues and organs
+
+
+
+Early detection is very important because it helps doctors begin treatment sooner and increases the chances of successful recovery.
+
+==================================================
+FEATURES OF THE PROJECT
+=======================
+• Machine Learning based prediction
+
+• User-friendly web interface
+
+• Real-time prediction results
+
+• Risk percentage display
+
+• Responsive design using Bootstrap
+
+• Medical information section
+
+• Automatic browser opening feature
+
+• Manual browser access support
+
+• Cancer detection result card
+
+• Fast and simple prediction process
+==================================================
+MACHINE LEARNING PROCESS
+========================
+1. Dataset Collection
+
+2. Data Cleaning and Preprocessing
+
+3. Feature Selection
+
+4. Model Training
+
+5. Model Testing and Evaluation
+
+6. Saving the Trained Model
+
+7. Integrating the Model with Flask
+
+8. Making Predictions Through the Website
+==================================================
+
+FUTURE IMPROVEMENTS
+
+===================
+
+• Add individual input fields for each feature
+
+• Generate downloadable PDF reports
+
+• Store prediction history
+
+• Add charts and visual analytics
+
+• Implement Explainable AI (SHAP)
+
+• User login and authentication system
+
+• Deploy the project online
+
+• Improve the UI with a healthcare dashboard design
+
+==================================================
+CONCLUSION
+==========
+This project demonstrates how Machine Learning and Web Development can work together to assist in the early prediction of breast cancer. It provides a simple, interactive, and user-friendly platform for testing breast cancer predictions and understanding the importance of early diagnosis.
+==================================================
+PROJECT DETAILS
+===============
+Project Name:
+AI Breast Cancer Prediction System
+
+Developed Using:
+Python, Flask, Machine Learning, Bootstrap
+
+Objective:
+To predict breast cancer risk using a trained Machine Learning model and provide results through an interactive web application.
+
+
