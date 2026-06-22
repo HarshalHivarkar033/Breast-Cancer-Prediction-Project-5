@@ -1,0 +1,196 @@
+==================================================
+PROJECT STRUCTURE
+AI BREAST CANCER PREDICTION SYSTEM
+==================================
+
+Breast cancer Prediction/
+│
+├── app.py
+│   Main Flask application file.
+│   Handles routing, user input, prediction,
+│   and result display.
+│
+├── model.pkl
+│   Trained Machine Learning model used
+│   for breast cancer prediction.
+│
+├── history.csv (Optional)
+│   Stores previous prediction records.
+│
+├── notes.txt
+│   Contains project description,
+│   working process, and execution steps.
+│
+├── structure.txt
+│   Contains project folder structure
+│   and file descriptions.
+│
+├── requirements.txt (Optional)
+│   Contains all required Python libraries.
+│
+├── templates/
+│   │
+│   └── index.html
+│       Main web page of the application.
+│       Contains user interface, forms,
+│       prediction result cards, and
+│       information sections.
+│
+├── static/
+│   │
+│   ├── style.css
+│   │   Contains custom CSS styling,
+│   │   background image settings,
+│   │   animations, and UI design.
+│   │
+│   ├── images.jpg
+│   │   Background image used by
+│   │   the website.
+│   │
+│   └── images/
+│       │
+│       └── (Additional images)
+│           Optional images used for
+│           future enhancements.
+│
+└── **pycache**/
+Automatically generated Python
+cache files.
+
+==================================================
+FILE DESCRIPTION
+================
+
+1. app.py
+
+---
+
+This is the main backend file.
+
+Responsibilities:
+• Starts Flask server
+• Loads trained model
+• Receives user input
+• Performs prediction
+• Calculates risk percentage
+• Displays prediction result
+
+==================================================
+
+2. model.pkl
+
+---
+
+Contains the trained Machine Learning model.
+
+Responsibilities:
+• Predict breast cancer status
+• Calculate prediction probability
+
+==================================================
+
+3. index.html
+
+---
+
+Frontend webpage.
+
+Responsibilities:
+• Display user interface
+• Accept feature inputs
+• Show prediction results
+• Display risk percentage
+• Display medical information
+
+==================================================
+
+4. style.css
+
+---
+
+Frontend styling file.
+
+Responsibilities:
+• Website design
+• Colors and layout
+• Responsive interface
+• Background image styling
+
+==================================================
+
+5. history.csv (Optional)
+
+---
+
+Stores prediction history.
+
+Example:
+
+Date,Prediction
+22-06-2026,Cancer Detected
+22-06-2026,No Cancer Detected
+
+==================================================
+APPLICATION FLOW
+================
+
+User Opens Website
+↓
+Enter Feature Values
+↓
+Submit Form
+↓
+Flask Backend Receives Data
+↓
+Data Converted to Numerical Format
+↓
+Machine Learning Model Prediction
+↓
+Risk Percentage Calculation
+↓
+Result Displayed on Website
+
+==================================================
+CURRENT PROJECT VERSION
+=======================
+
+Features Available:
+
+✔ Flask Web Application
+✔ Machine Learning Prediction
+✔ Risk Percentage Display
+✔ Responsive Bootstrap UI
+✔ Medical Information Section
+✔ Automatic Browser Opening
+✔ Manual Browser Access
+✔ Cancer Detection Result Card
+
+==================================================
+FUTURE STRUCTURE (UPGRADED VERSION)
+===================================
+
+Breast cancer Prediction/
+│
+├── app.py
+├── model.pkl
+├── history.csv
+├── reports/
+│   └── PDF Reports
+│
+├── static/
+│   ├── style.css
+│   ├── script.js
+│   └── images/
+│
+├── templates/
+│   ├── index.html
+│   ├── history.html
+│   └── report.html
+│
+└── database/
+└── predictions.db
+
+==================================================
+
+
+
