@@ -2,6 +2,8 @@ from flask import Flask, render_template, request
 import numpy as np
 import pandas as pd
 import pickle
+import webbrowser
+from threading import Timer
 
 # loading model
 import os
@@ -29,9 +31,16 @@ def predict():
 
     # prediction
     pred = model.predict(np_features.reshape(1, -1))
+    prob = model.predict_proba(np_features.reshape(1,-1))[0][1]
     output = ['Cancer Detected' if pred[0] == 1 else 'No Cancer Detected']
-    return render_template('index.html', message=output)
+    return render_template(
+    'index.html',
+    message=output,
+    probability=round(prob*100,2)
+)
 
-
-if __name__ == '__main__':
-    app.run(debug=True)
+def open_browser():
+    webbrowser.open_new("http://127.0.0.1:5000")
+if __name__ == "__main__":
+    Timer(1, open_browser).start()
+    app.run(debug=True, use_reloader=False)
